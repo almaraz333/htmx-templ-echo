@@ -10,9 +10,9 @@ import "context"
 import "io"
 import "bytes"
 
-import "html-templ-echo/types"
-import "html-templ-echo/components"
-import "html-templ-echo/layout"
+import "htmx-templ-echo/types"
+import "htmx-templ-echo/components"
+import "htmx-templ-echo/layout"
 
 func getName(c context.Context) string {
 	name, ok := c.Value("name").(string)

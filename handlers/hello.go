@@ -1,16 +1,14 @@
 package handlers
 
 import (
-	"html-templ-echo/templates/hello"
-	"html-templ-echo/types"
-	"html-templ-echo/utils"
+	"htmx-templ-echo/templates/hello"
+	"htmx-templ-echo/types"
+	"htmx-templ-echo/utils"
 
 	"github.com/labstack/echo/v4"
 )
 
-type HelloHandler struct{}
-
-func (h HelloHandler) HandleHelloShow(c echo.Context) error {
+func HandleHelloShow(c echo.Context) error {
 	helloStruct := types.Hello{
 		Name: "Ranger Boy",
 	}

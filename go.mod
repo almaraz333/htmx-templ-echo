@@ -1,4 +1,4 @@
-module html-templ-echo
+module htmx-templ-echo
 
 go 1.21.6
 

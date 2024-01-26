@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"html-templ-echo/handlers"
+	"htmx-templ-echo/handlers"
 
 	"github.com/labstack/echo/v4"
 )
@@ -10,10 +10,8 @@ import (
 func main() {
 	app := echo.New()
 
-	helloHandler := handlers.HelloHandler{}
-
 	app.Use(withMiddleware)
-	app.GET("/", helloHandler.HandleHelloShow)
+	app.GET("/", handlers.HandleHelloShow)
 
 	app.Start(":3000")
 }
