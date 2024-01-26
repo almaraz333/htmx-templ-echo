@@ -1,0 +1,24 @@
+package hello
+
+import "html-templ-echo/types"
+import "html-templ-echo/components"
+import "html-templ-echo/layout"
+
+func getName(c context.Context) string {
+	name, ok := c.Value("name").(string)
+
+	if !ok {
+		return ""
+	}
+
+	return name
+}
+
+templ Show(hello types.Hello) {
+	<h1 class="text-5xl text-blue-900">{ getName(ctx) }</h1>
+	@layout.Base() {
+		<h1 class="text-3xl text-red-500">Hello, { hello.Name }</h1>
+		<p>From the Show function of Hello</p>
+		@components.Input("number", "email")
+	}
+}
